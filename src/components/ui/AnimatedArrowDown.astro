@@ -1,0 +1,31 @@
+---
+    import { Icon } from 'astro-icon/components'
+---
+
+<Icon name="arrow-down" class="arrow-down" />
+
+<style>
+    .arrow-down {
+        position: absolute;
+        left: 50%;
+        bottom: 10;
+        color: var(--primary);
+        font-size: 2rem;
+        transform: translateY(-10px);
+        animation: down 1.5s ease infinite;
+    }
+
+    @keyframes down {
+        0% {
+            transform: translateY(-10px);
+        }
+
+        50% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+</style>

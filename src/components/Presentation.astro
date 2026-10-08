@@ -1,8 +1,10 @@
 ---
     import { Icon } from 'astro-icon/components'
+    import StickyCard from './ui/StickyCard.astro'
+    import AnimatedArrowDown from './ui/AnimatedArrowDown.astro'
 ---
 
-<section class="card">
+<StickyCard>
     <h1 class="title font-sans">
         Mi nombre es
         <br>
@@ -21,21 +23,10 @@
         </a>
     </div>
 
-    <Icon name="arrow-down" class="arrow-down" />
-</section>
+    <AnimatedArrowDown />
+</StickyCard>
 
 <style>
-    .card {
-        position: sticky;
-        top: 0;
-        left: 0;
-        padding: 5rem 4rem;
-        min-height: 100vh;
-        margin: 0 auto;
-        background: var(--surface);
-        box-shadow: 0 -10px 30px rgba(0, 0, 0, .4);
-    }
-
     .title {
         font-size: 6rem;
         font-weight: 900;
@@ -80,25 +71,5 @@
     .social-link:active {
         transform: translateY(10px);
         box-shadow: 0 2px var(--primary);
-    }
-
-    .arrow-down {
-        position: absolute;
-        left: 50%;
-        bottom: 10;
-        color: var(--primary);
-        font-size: 2rem;
-        transform: translateY(-10px);
-        animation: down 1.5s ease infinite;
-    }
-
-    @keyframes down {
-        from {
-            transform: translateY(-10px);
-        }
-
-        to {
-            transform: translateY(10px);
-        }
     }
 </style>
