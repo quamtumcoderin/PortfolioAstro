@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Portfolio</title>
+	</head>
+	<body class="font-body">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+	*, *::before, *::after {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+
+	:root {
+		font-size: 16px;
+		
+		--surface: #0E1117;
+		--surface-container: #161B22;
+		--surface-high: #21262D;
+		--on-surface: #E6EDF3;
+		--on-surface-variant: #8B949E;
+		--primary: #00F0FF;
+		--secondary: #FF007F;
+		--tertiary: #39FF14;
+		--border-primary: #435d5b;
+	}
+
+	html,
+	body {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+		background: var(--surface);
+		color: var(--on-surface);
+	}
+
+	.font-sans {
+		font-family: "Space Grotesk", sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+
+	.font-body {
+		font-family: "Inter", sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+
+	.font-accent {
+		font-family: "JetBrains Mono", sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+</style>

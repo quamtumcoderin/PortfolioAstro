@@ -1,0 +1,97 @@
+---
+    import Github from '../assets/github.svg'
+    import LinkedIn from '../assets/linkedin.svg'
+    import FileTypePdf from '../assets/filetype-pdf.svg'
+    import ArrowDown from '../assets/arrow-down.svg'
+---
+
+<div id="container">
+    <section class="card">
+        <h1 class="top-title font-sans">
+            Mi nombre es
+            <br>
+            <span class="top-title-accent">Elder Estrada.</span></h1>
+        <p class="top-description">Desarrollador Web Fullstack en crecimiento.</p>
+
+        <div class="social-links">
+            <a href="https://github.com/quamtumcoderin" target="_blank" class="social-link">
+                <img src={Github.src}> GitHub
+            </a>
+            <a href="https://google.com/" target="_blank" class="social-link">
+                <img src={LinkedIn.src}> LinkedIn
+            </a>
+            <a href="https://google.com/" target="_blank" class="social-link">
+                <img src={FileTypePdf.src}> Curriculum
+            </a>
+        </div>
+
+            <img src={ArrowDown.src}>
+    </section>
+
+    <section class="card">
+        hola
+    </section>
+</div>
+
+<style>
+    .container {
+        scroll-behavior: smooth;
+    }
+
+    .card {
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding: 5rem 4rem;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: var(--surface);
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, .4);
+    }
+
+    .top-title {
+        font-size: 6rem;
+        font-weight: 900;
+    }
+
+    .top-title-accent {
+        color: var(--primary);
+    }
+
+    .top-description {
+        font-size: 1.3rem;
+        color: var(--on-surface-variant);
+        padding: 0 4px;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        padding: 1rem 4px;
+    }
+
+    .social-link {
+        position: relative;
+        padding: .8rem 1.4rem;
+        font-weight: 700;
+        color: var(--surface-high);
+        text-decoration: none;
+        background: var(--primary);
+        border: 2px solid var(--border-primary);
+        border-radius: 1.5rem;
+        box-shadow: 0 10px var(--primary);
+
+        transition: transform 0.08s ease, box-shadow 0.08s ease;
+    }
+
+    .social-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px var(--primary);
+    }
+
+    .social-link:active {
+        transform: translateY(10px);
+        box-shadow: 0 2px var(--primary);
+    }
+</style>
